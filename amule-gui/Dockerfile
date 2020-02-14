@@ -28,5 +28,6 @@ COPY config/fluxbox-init /root/.fluxbox/init
 COPY config/fluxbox-apps /root/.fluxbox/apps
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 COPY scripts /app
+RUN chmod +x /app/init.sh
 
 ENTRYPOINT ["/app/init.sh"]
