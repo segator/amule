@@ -17,7 +17,7 @@ RUN apk add -X http://dl-cdn.alpinelinux.org/alpine/edge/testing amule && \
     rm -rf /var/cache/apk/*
     
 COPY amule.sh /app/amule.sh
-
+RUN chmod +x amule.sh
 
 EXPOSE 4711/tcp 4712/tcp 4672/udp 4665/udp 4662/tcp 4662/udp
 
