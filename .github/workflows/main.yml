@@ -1,27 +1,27 @@
 name: CI
-
-on: [push]
-
+on:    
+  push:
+    branches: 
+    - master
 jobs:
-  build:
-
+  "Build Daemon":
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v2
     - name: Build Daemon
       uses: elgohr/Publish-Docker-Github-Action@2.12
       with:        
-        name: segator/amule
+        name: segator/amuled
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}        
         workdir: amule-daemon
-        tag_names: daemon
+  "Build GUI":    
+    runs-on: ubuntu-latest
+    steps:
     - name: Build GUI
       uses: elgohr/Publish-Docker-Github-Action@2.12
       with:        
-        name: segator/amule
+        name: segator/amulegui
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}        
-        workdir: amule-gui
-        tag_names: gui
+        workdir: amule-gui        
