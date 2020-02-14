@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 AMULE_HOME=/amule/.aMule
 AMULE_CONF=${AMULE_HOME}/amule.conf
 mkdir -p ${AMULE_HOME}
