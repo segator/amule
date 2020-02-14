@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2   
-    - name: Build Daemon
+    - name: Docker Build and Publish
       uses: elgohr/Publish-Docker-Github-Action@2.12
       with:        
         name: segator/amuled
@@ -21,7 +21,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Build GUI
+    - name: Docker Build and Publish
       uses: elgohr/Publish-Docker-Github-Action@2.12
       with:        
         name: segator/amulegui
