@@ -10,7 +10,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2   
     - name: Docker Build and Publish
-      uses: elgohr/Publish-Docker-Github-Action@2.12
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:        
         name: segator/amuled
         username: ${{ secrets.DOCKER_USERNAME }}
@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Docker Build and Publish
-      uses: elgohr/Publish-Docker-Github-Action@2.12
+      uses: elgohr/Publish-Docker-Github-Action@v5
       with:        
         name: segator/amulegui
         username: ${{ secrets.DOCKER_USERNAME }}
